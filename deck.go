@@ -28,6 +28,7 @@ func (d deck) print() {
 	}
 }
 
-func (d deck) deal(handSize int) (deck, deck) {
-	return d[:handSize], d[handSize:]
+// deal (n) cards from the deck, and return the remaining cards in the deck
+func deal(d deck, n int) (deck, deck) {
+	return d[:n], d[n:]
 }
